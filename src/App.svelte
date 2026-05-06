@@ -426,9 +426,9 @@
 
                                     {#if isDataFetched && filteredInventory.length > 0}
                                         <div class="pagination-bar" in:fade>
-                                            <button class="page-btn" disabled={currentPage === 1} on:click={() => changePage(-1)}>Sebelumnya</button>
+                                            <button class="page-btn" disabled={currentPage === 1} on:click={() => changePage(-1)}>Previous</button>
                                             <span class="page-info">Halaman {currentPage} dari {totalPages}</span>
-                                            <button class="page-btn" disabled={currentPage === totalPages} on:click={() => changePage(1)}>Selanjutnya</button>
+                                            <button class="page-btn" disabled={currentPage === totalPages} on:click={() => changePage(1)}>Next</button>
                                         </div>
                                     {/if}
                                 {/if}
