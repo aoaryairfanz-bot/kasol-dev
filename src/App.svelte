@@ -398,7 +398,7 @@
                                             </thead>
                                             <tbody>
                                                 {#if filteredInventory.length === 0}
-                                                    <tr><td colspan="4" class="empty-td">Data kosong atau tidak ditemukan.</td></tr>
+                                                    <tr><td colspan="4" class="empty-td">Data tidak ditemukan.</td></tr>
                                                 {:else}
                                                     {#each paginatedData as item (item.sku)}
                                                         <tr>
