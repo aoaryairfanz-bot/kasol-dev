@@ -2,7 +2,7 @@
     <div class="container footer-content">
         <div class="footer-brand">
             <h2>K<span>Dev</span></h2>
-            <p>Empowering creators with fast, AI-driven media tools.</p>
+            <p>Smile more, worry less🤗.</p>
         </div>
         <div class="footer-links">
             <div class="link-col">
@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2026 Kasol Dev API. All rights reserved.</p>
+        <p>Made with ♡ by  KasolDev &copy; 2026. All rights reserved.</p>
     </div>
 </footer>
 

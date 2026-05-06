@@ -364,10 +364,12 @@
                                             <input type="text" bind:value={searchTableQuery} placeholder="Cari SKU/Nama..." class="table-search-input" />
                                             <select class="select-dropdown" bind:value={itemsPerPage} on:change={handleItemsPerPageChange}>
                                                 <option value={10}>10 Baris</option>
+                                                <option value={15}>15 Baris</option>
                                                 <option value={50}>50 Baris</option>
                                                 <option value={100}>100 Baris</option>
                                                 <option value={300}>300 Baris</option>
                                                 <option value={500}>500 Baris</option>
+                                                <option value={999999}>Semua Data</option>
                                             </select>
                                         {/if}
 
@@ -553,11 +555,41 @@
     .select-dropdown { padding: 8px 10px; border: 2px solid #e5e7eb; border-radius: 8px; font-family: inherit; font-weight: bold; font-size: 0.85rem; outline: none; cursor: pointer; color: var(--text-dark); }
     .select-dropdown:focus { border-color: var(--pink-btn); }
 
-    .table-wrapper { overflow-x: auto; border: 1px solid #e5e7eb; border-radius: 12px; background: white; }
+    .table-wrapper { 
+        overflow-x: auto; 
+        overflow-y: auto; /* Mengaktifkan scroll vertikal */
+        max-height: 550px; /* Batas tinggi tabel (kira-kira 15 baris) */
+        border: 1px solid #e5e7eb; 
+        border-radius: 12px; 
+        background: white; 
+        
+        /* Menyembunyikan tampilan scrollbar secara visual */
+        -ms-overflow-style: none;  /* Untuk IE & Edge */
+        scrollbar-width: none;  /* Untuk Firefox */
+    }
+    
+    /* Menyembunyikan scrollbar untuk Chrome, Safari, dan Opera */
+    .table-wrapper::-webkit-scrollbar {
+        display: none; 
+    }
+
     .data-table { width: 100%; border-collapse: collapse; min-width: 600px; }
     
     .data-table th, .data-table td { padding: 8px 12px; border-bottom: 1px solid #f3f4f6; font-size: 0.75rem; }
-    .data-table th { background: #f9fafb; font-weight: 800; color: var(--text-gray); text-transform: uppercase; font-size: 0.65rem; }
+    
+    /* Membuat Header Tabel menempel di atas (Sticky) */
+    .data-table th { 
+        position: sticky; 
+        top: 0; 
+        z-index: 10; /* Agar header tidak tertimpa baris data yang lewat */
+        background: #f9fafb; 
+        font-weight: 800; 
+        color: var(--text-gray); 
+        text-transform: uppercase; 
+        font-size: 0.65rem; 
+        box-shadow: 0 1px 0 #f3f4f6; /* Menggunakan shadow sebagai ganti border bottom */
+    }
+
     .data-table tr:hover { background: #fdf2f8; }
     .empty-td { text-align: center; padding: 30px; color: var(--text-gray); font-weight: bold; }
     

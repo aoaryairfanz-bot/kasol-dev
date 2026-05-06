@@ -146,11 +146,11 @@
     .desktop-actions { display: flex; align-items: center; gap: 20px; font-size: 0.9rem; font-weight: 600; }
 
     /* Hamburger Style */
-    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 5px; z-index: 110; }
-    .hamburger span { display: block; width: 25px; height: 3px; background: #111827; transition: 0.3s; border-radius: 2px; }
-    .hamburger span.open:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: pointer; padding: 5px; z-index: 110; }
+    .hamburger span { display: block; width: 20px; height: 2px; background: #111827; transition: 0.3s; border-radius: 2px; }
+    .hamburger span.open:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .hamburger span.open:nth-child(2) { opacity: 0; }
-    .hamburger span.open:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    .hamburger span.open:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
     .main-nav { display: flex; gap: 30px; padding: 15px 40px; border-top: 1px solid #eaeaea; font-weight: 600; color: #6b7280;}
     .main-nav button { background: none; border: none; font-size: 1rem; cursor: pointer; color: inherit; font-family: inherit; transition: 0.2s;}
